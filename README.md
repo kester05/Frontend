@@ -122,7 +122,7 @@ NODE_ENV=development
   - Go to https://www.mongodb.com/cloud/atlas
   - Create a free account and cluster
   - Get connection string (replace `<password>` and update URI)
-  - Example: `MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/inventory_db`
+  - Example: `MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/inventory`
 
 5. Start the server:
 ```bash
