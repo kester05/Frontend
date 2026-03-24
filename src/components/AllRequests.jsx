@@ -123,6 +123,8 @@ function AllRequests() {
               <th>Qty Requested</th>
               <th>Qty Approved</th>
               <th>Status</th>
+              <th>Reason</th>
+              <th>Admin Comment</th>
               <th>Date</th>
               <th>Actions</th>
             </tr>
@@ -139,6 +141,8 @@ function AllRequests() {
                     {request.status}
                   </span>
                 </td>
+                <td>{request.reason || "-"}</td>
+                <td>{request.adminComment || "-"}</td>
                 <td>{new Date(request.createdAt).toLocaleDateString()}</td>
                 <td>
                   {request.status === "pending" && (
@@ -193,6 +197,9 @@ function AllRequests() {
                 <p>
                   <strong>Requested Quantity:</strong>{" "}
                   {selectedRequest?.requestedQuantity}
+                </p>
+                <p>
+                  <strong>Reason:</strong> {selectedRequest?.reason || "-"}
                 </p>
               </div>
 

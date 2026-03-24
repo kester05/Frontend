@@ -65,6 +65,8 @@ function MyRequests() {
               <th>Quantity Requested</th>
               <th>Approved Quantity</th>
               <th>Status</th>
+              <th>Reason</th>
+              <th>Admin Comment</th>
               <th>Created Date</th>
               <th>Actions</th>
             </tr>
@@ -80,6 +82,8 @@ function MyRequests() {
                     {request.status}
                   </span>
                 </td>
+                <td>{request.reason || "-"}</td>
+                <td>{request.adminComment || "-"}</td>
                 <td>{new Date(request.createdAt).toLocaleDateString()}</td>
                 <td>
                   {(request.status === "pending" || request.status === "approved") && (
